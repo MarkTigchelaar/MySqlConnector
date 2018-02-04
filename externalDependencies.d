@@ -4,7 +4,7 @@ import std.typecons;
 import core.stdc.config;
 
 version(MySQL_51) {
-	// we good
+
 } else version(Less_Than_MySQL_51) {}
 
 version(Windows) {
@@ -15,7 +15,7 @@ else {
 }
 
 extern(System) {
-	alias const(ubyte)* cstring;// why two steps? only use one.
+	alias const(ubyte)* cstring;
 	alias cstring* MYSQL_ROW;
 
 	// From MySQL C API Data Structures
